@@ -1,0 +1,27 @@
+[flake8]
+max-line-length = 100
+exclude =
+    .venv,
+    .git,
+    __pycache__,
+    tests,
+    examples,
+    *.egg-info
+application-import-names = pocketeval
+allowed-domain-names = content,data,n,result,results,value
+allowed-module-metadata = __all__
+max-imported-names = 14
+max-imports = 15
+max-module-members = 16
+max-local-variables = 9
+max-cognitive-score = 12
+max-cognitive-average = 10
+max-jones-score = 24
+max-try-body-length = 8
+ignore = E203,E704,W503
+
+per-file-ignores =
+    src/pocketeval/__init__.py:WPS412
+    src/pocketeval/evals/__init__.py:WPS412,WPS203,WPS235
+    src/pocketeval/evals/core.py:WPS476
+    src/pocketeval/evals/checks.py:WPS430
